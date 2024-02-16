@@ -1,0 +1,86 @@
+
+#notificaciones {
+  width: 400px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+.imagen {
+  width: 50px;
+  height: auto;
+  margin: 10px;
+}
+
+td.imageCell {
+  text-align: center;
+}
+
+.infoNotification {
+  border-radius: 5px;
+  margin: 10px;
+  background: white;
+}
+
+div.notification {
+  position: relative;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin: 5px;
+  z-index: 1000;
+  animation: aparecer 0.5s forwards; 
+}
+
+@keyframes aparecer {
+  0% { opacity: 0; }
+  50%{ opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.notificacion.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0); /* Añadir transformación */
+}
+
+.notificacion.hide {
+  opacity: 0;
+  transform: translateY(20px); /* Añadir transformación */
+}
+
+table {
+  table-layout: fixed;
+  padding: 5px;
+}
+
+button.buttonStyle {
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  padding: 5px;
+  margin: 5px;
+}
+
+td.title {
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+td { 
+  font-family: sans-serif;
+}
+
+.closeButton {
+  position: absolute;
+  background-color: transparent;
+  border-radius: 3px;
+  border: 0px;
+  top: 5px;
+  right: 5px;
+  margin: 5px;
+  font-family: sans-serif;
+}
+
+/* .closeButton:hover{
+  background-color: lightgray;
+} */

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notificación Personalizada</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <label for="nombre">Titulo de la notificación:</label><br>
+  <input type="text" id="tilte"><br>
+  <label for="email">Email:</label><br>
+  <input type="text" id="description"><br><br>
+  <button type="submit" id="submit" onclick="enviarNotificación(title, description, new Date())">Enviar Notificación</button>
+
+  <button id="abrirNotificacion">Abrir Notificación</button>
+  
+  <div id="notificaciones">
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
