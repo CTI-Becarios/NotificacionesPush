@@ -168,7 +168,7 @@ pre code {
   height: 100%;
   width: 100%;
   background-color: #3c8dbc; 
-  animation: progressAnimation 5s linear; 
+  animation: progressAnimation 10s linear; 
 }
 
 @keyframes progressAnimation {
