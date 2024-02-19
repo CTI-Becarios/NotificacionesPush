@@ -3,6 +3,10 @@ const title = "Notificaciones CTI";
 const description = "Revisa tus tareas pendientes.";
 
 document.getElementById('abrirNotificacion').addEventListener('click', function() {
+  mostrarNotificacion(count, title, description);
+});
+
+function mostrarNotificacion(count, title, description) {
   let maxNotification = 4;
   let id = parseInt(generateUniqueId());
   let date = new Date();
