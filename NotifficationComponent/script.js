@@ -1,4 +1,5 @@
 var count = 0;
+let id = 0;
 const title = "Notificaciones CTI";
 const description = "Revisa tus tareas pendientes.";
 
@@ -8,8 +9,7 @@ document.getElementById('abrirNotificacion').addEventListener('click', function(
 
 function mostrarNotificacion(title, description) {
   let maxNotification = 4;
-  let id = parseInt(generateUniqueId());
-  let date = new Date();
+  id = id + 1;
   
   var notificacion = document.createElement('div');
   notificacion.className = 'notification';
@@ -45,10 +45,6 @@ function mostrarNotificacion(title, description) {
     count++;
 };
 
-function generateUniqueId() {
-  return Math.random().toString(36).substring(2) + Date.now() .toString(36);
-}
-
 function cerrarNotificacion(id, event) {
   let notificacion = document.querySelector(`.notification[data-id="${id}"]`);
   document.getElementById('notificaciones').removeChild(notificacion);
@@ -60,15 +56,3 @@ function abrirEnlace(id, event){
   cerrarNotificacion(id, event);
 }
 
-//  funtion cerrarNotificacion(id){
-//   var notificacion = document.querySelector(`.notificacion[data-id="${id}"]`);
-//   var notificaciones = document.getElementsByClassName('notificacion');
-//   notificacion.style.opacity = 0;
-//   setTimeout(function() {
-//     notificacion.remove();
-//     for (var i = id - 1; i < notificaciones.length; i++) {
-//       notificaciones[i].style.bottom = parseInt(notificaciones[i].style.bottom) - 120 + 'px';
-//     }
-//     contadorNotificaciones--;
-//   }, 300);
-// }
